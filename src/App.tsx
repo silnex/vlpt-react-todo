@@ -1,4 +1,3 @@
-import "./App.css";
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
