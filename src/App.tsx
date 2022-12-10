@@ -1,4 +1,5 @@
 import TodoHead from "./components/TodoHead";
+import TodoList from "./components/TodoList";
 import TodoTemplate from "./components/TodoTemplate";
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
     <>
       <TodoTemplate>
         <TodoHead />
-        Hello World
+        <TodoList />
       </TodoTemplate>
     </>
   );
