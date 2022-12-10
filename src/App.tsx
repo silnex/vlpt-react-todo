@@ -1,16 +1,15 @@
-import { createGlobalStyle } from "styled-components";
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    background: #e9ecef;
-  }
-`
+import TodoHead from "./components/TodoHead";
+import TodoTemplate from "./components/TodoTemplate";
 
 function App() {
-  return <>
-    <GlobalStyle />
-    <div>Hello World</div>
-  </>;
+  return (
+    <>
+      <TodoTemplate>
+        <TodoHead />
+        Hello World
+      </TodoTemplate>
+    </>
+  );
 }
 
 export default App;
