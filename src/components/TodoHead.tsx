@@ -24,13 +24,19 @@ const TodoHeadBlock = styled.div`
 
 function TodoHead() {
   const todos = useTodoState();
-  console.log(todos);
+  const undoneTasks = todos.filter((todo: any) => !todo.done);
+
+  const today = new Date();
+  const dateString = Intl.DateTimeFormat("ko", {
+    dateStyle: "long",
+  }).format(today);
+  const dayName = Intl.DateTimeFormat("ko", { weekday: "long" }).format(today);
 
   return (
     <TodoHeadBlock>
-      <h1>2022년 7월 10일</h1>
-      <div className="day">수요일</div>
-      <div className="tasks-left">할 일 2개 남음</div>
+      <h1>{dateString}</h1>
+      <div className="day">{dayName}</div>
+      <div className="tasks-left">할 일 {undoneTasks.length}개 남음</div>
     </TodoHeadBlock>
   );
 }
